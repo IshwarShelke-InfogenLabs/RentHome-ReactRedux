@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import {
   getAuth,
   createUserWithEmailAndPassword,
@@ -58,8 +59,7 @@ function SignUp() {
 
       navigate("/");
     } catch (error) {
-      // toast.error("Something went wrong with registration");
-      console.error(error);
+      toast.error("Something went wrong with registration");
     }
   };
 
